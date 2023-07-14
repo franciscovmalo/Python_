@@ -24,9 +24,9 @@ repeat_list = []
 number_of_obj = 30
 generate = True
 
-#letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','y','z',
-#            '1','2','3','4','5','6','7','8','9']
-letters = ['F','R','A','N','C','I','S','C','O', 'V','I','C','E','N','T','E', 'MALO', '007']
+chars = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
+           'q','r','s','t','u','v','x','y','z','1','2','3','4','5','6','7','8','9']
+
 
 screen = pygame.display.set_mode((SCREE_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Matrix Animation')
@@ -44,7 +44,7 @@ class codeline:
         self.ypos_list.append(self.ypos)
     
     def draw_codeline(self):
-        randomic_letter = choice(letters)
+        randomic_letter = choice(chars)
         self.letters_list.append(randomic_letter)
 
         for msg, y in zip(self.letters_list, self.ypos_list):
